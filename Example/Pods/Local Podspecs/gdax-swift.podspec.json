@@ -21,7 +21,7 @@
   "source_files": "gdax-swift/Classes/**/*",
   "dependencies": {
     "Starscream": [
-      "~> 2.0.0"
+      "~> 3.0.4"
     ]
   }
 }
