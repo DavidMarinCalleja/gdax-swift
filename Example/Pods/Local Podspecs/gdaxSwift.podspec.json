@@ -1,0 +1,27 @@
+{
+  "name": "gdaxSwift",
+  "version": "0.1.0",
+  "summary": "A short description of gdaxSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/onedavix/gdaxSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "onedavix": "david.marin.calleja@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/onedavix/gdaxSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "gdaxSwift/Classes/**/*",
+  "dependencies": {
+    "Starscream": [
+      "~> 3.0.4"
+    ]
+  }
+}

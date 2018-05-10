@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import gdax-swift
+import gdaxSwift
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - gdax-swift (0.0.1):
+  - gdaxSwift (0.1.0):
     - Starscream (~> 3.0.4)
   - Nimble (7.0.3)
   - Nimble-Snapshots (6.3.0):
@@ -17,7 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
-  - gdax-swift (from `../`)
+  - gdaxSwift (from `../`)
   - Nimble (~> 7.0.2)
   - Nimble-Snapshots (~> 6.3.0)
   - Quick (~> 1.2.0)
@@ -31,17 +31,17 @@ SPEC REPOS:
     - Starscream
 
 EXTERNAL SOURCES:
-  gdax-swift:
+  gdaxSwift:
     :path: "../"
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  gdax-swift: 197d3c54c6f7a72c85bb0d697639c0b75283a4b1
+  gdaxSwift: 99d373fde8748fbb4ef407b10b41c6cdeb110564
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
 
-PODFILE CHECKSUM: cc4433487e3dd6e630f49e22973c7af89c8a72e9
+PODFILE CHECKSUM: 5afcdf7947e212b28050129bf24d882bd4d6c1bf
 
 COCOAPODS: 1.5.0
