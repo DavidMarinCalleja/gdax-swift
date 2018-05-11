@@ -69,7 +69,10 @@
 		5FDBCF31F15EBB5AC3776F868576777F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5BA97824B47EC74FAA389F10A4581F /* Foundation.framework */; };
 		6236BE5FA5B5B8A0B39104A94F3CD782 /* HaveValidSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FC987B30DFC27415D664BFB601C2A /* HaveValidSnapshot.swift */; };
 		62D26CE7BA3AEDB4E5E87218FDCBBA90 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F637B9D46F84AFC351B5B7BD85873E3 /* Functional.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		634B428920A4E05000377AE4 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B428820A4E05000377AE4 /* FeedService.swift */; };
+		63544A2920A630D500572216 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63544A2720A62FE000572216 /* Logger.swift */; };
+		63544A2C20A639C300572216 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63544A2A20A639BD00572216 /* Constants.swift */; };
+		63544A2F20A63CB600572216 /* Subscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63544A2E20A63CB600572216 /* Subscribe.swift */; };
+		63D4309D20A4E2E900D16860 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B428820A4E05000377AE4 /* FeedService.swift */; };
 		64C7C39E664F193CB945E0EC6F478B24 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DDC20B05728AE99F2406CAD86A64C5 /* XCTest.framework */; };
 		6593C547A71CCEFC480CD578080A327F /* mach_excServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD0BDFD95AA06C23E15446CCFC99AF6 /* mach_excServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65985C142EE8A74E6E56D5E30A39C79C /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C86B7DFF9BF754DDF90319AAF70A198 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -333,6 +336,9 @@
 		6150B6B1770C2BEB531898704C9968EC /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Sources/Nimble/Matchers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
 		624F892DA9A6D1943EBFE00130C2417A /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		634B428820A4E05000377AE4 /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		63544A2720A62FE000572216 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		63544A2A20A639BD00572216 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		63544A2E20A63CB600572216 /* Subscribe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscribe.swift; sourceTree = "<group>"; };
 		6811EAB191F6E01F806CE69A62C4F1EC /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
 		68556B76C0DAB38586DC3E21132B116C /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickSpecBase/include/QuickSpecBase.h; sourceTree = "<group>"; };
 		68EECE111D3C3CDBFFB0786397035116 /* gdaxSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = gdaxSwift.xcconfig; sourceTree = "<group>"; };
@@ -592,7 +598,10 @@
 			children = (
 				5F49E09508BF3F4C3118E77FE8C977D6 /* Pod */,
 				27163024CFCDFCA67AFF564501A3B97A /* Support Files */,
+				63544A2D20A63CA700572216 /* Model */,
 				634B428820A4E05000377AE4 /* FeedService.swift */,
+				63544A2720A62FE000572216 /* Logger.swift */,
+				63544A2A20A639BD00572216 /* Constants.swift */,
 			);
 			name = gdaxSwift;
 			path = ../..;
@@ -670,6 +679,14 @@
 				38C5C7FBEECCF0F5BB696561B9C1CB28 /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		63544A2D20A63CA700572216 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63544A2E20A63CB600572216 /* Subscribe.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		65E0A990741D5B1523B00103BB566797 /* Targets Support Files */ = {
@@ -1357,7 +1374,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63544A2F20A63CB600572216 /* Subscribe.swift in Sources */,
 				A6BDB6B80D29CFEB4ECD8765FE537BFC /* gdaxSwift-dummy.m in Sources */,
+				63544A2C20A639C300572216 /* Constants.swift in Sources */,
+				63544A2920A630D500572216 /* Logger.swift in Sources */,
+				63D4309D20A4E2E900D16860 /* FeedService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,7 +1403,6 @@
 				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
 				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
 				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,
-				634B428920A4E05000377AE4 /* FeedService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
